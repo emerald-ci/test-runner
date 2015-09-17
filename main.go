@@ -2,22 +2,25 @@ package main
 
 import (
 	"log"
+	"os"
 
-	"github.com/docker/libcompose/docker"
-	"github.com/docker/libcompose/project"
+	"github.com/emerald-ci/test-runner/project"
 )
 
 func main() {
-	project, err := docker.NewProject(&docker.Context{
-		Context: project.Context{
-			ComposeFile: "docker-compose.yml",
-			ProjectName: "my-compose",
-		},
-	})
-
+	buildConfig, err := project.LoadBuildConfig()
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	project.Up()
+	composeProject, err := project.BuildComposeProject(buildConfig.ComposeFile)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	exitCode, err := composeProject.Run(buildConfig.Service, buildConfig.CommandParts())
+	if err != nil {
+		log.Fatal(err)
+	}
+	os.Exit(exitCode)
 }

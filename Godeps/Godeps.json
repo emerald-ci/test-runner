@@ -1,19 +1,11 @@
 {
-	"ImportPath": "github.com/docker/libcompose",
-	"GoVersion": "go1.4.1",
-	"Packages": [
-		"./..."
-	],
+	"ImportPath": "github.com/emerald-ci/test-runner",
+	"GoVersion": "go1.5",
 	"Deps": [
 		{
 			"ImportPath": "github.com/Sirupsen/logrus",
 			"Comment": "v0.7.3-2-g26709e2",
 			"Rev": "26709e2714106fb8ad40b773b711ebce25b78914"
-		},
-		{
-			"ImportPath": "github.com/codegangsta/cli",
-			"Comment": "1.2.0-66-g6086d79",
-			"Rev": "6086d7927ec35315964d9fea46df6c04e6d697c1"
 		},
 		{
 			"ImportPath": "github.com/docker/distribution",
@@ -201,6 +193,30 @@
 			"Rev": "f39987afe8d611407887b3094c03d6ba6a766a67"
 		},
 		{
+			"ImportPath": "github.com/docker/libcompose/cli/logger",
+			"Rev": "2200e363b4671abbef847441497d13a66907ca74"
+		},
+		{
+			"ImportPath": "github.com/docker/libcompose/docker",
+			"Rev": "2200e363b4671abbef847441497d13a66907ca74"
+		},
+		{
+			"ImportPath": "github.com/docker/libcompose/logger",
+			"Rev": "2200e363b4671abbef847441497d13a66907ca74"
+		},
+		{
+			"ImportPath": "github.com/docker/libcompose/lookup",
+			"Rev": "2200e363b4671abbef847441497d13a66907ca74"
+		},
+		{
+			"ImportPath": "github.com/docker/libcompose/project",
+			"Rev": "2200e363b4671abbef847441497d13a66907ca74"
+		},
+		{
+			"ImportPath": "github.com/docker/libcompose/utils",
+			"Rev": "2200e363b4671abbef847441497d13a66907ca74"
+		},
+		{
 			"ImportPath": "github.com/docker/libtrust",
 			"Rev": "9cbd2a1374f46905c68a4eb3694a130610adc62a"
 		},
@@ -223,12 +239,7 @@
 		},
 		{
 			"ImportPath": "github.com/samalba/dockerclient",
-			"Rev": "68832c185bb6304fed26a986891fd27b6ed17987"
-		},
-		{
-			"ImportPath": "github.com/stretchr/testify/assert",
-			"Comment": "v1.0-12-g7e4a149",
-			"Rev": "7e4a149930b09fe4c2b134c50ce637457ba6e966"
+			"Rev": "14849c8f5ab609e834348fccad25e32877952fa7"
 		},
 		{
 			"ImportPath": "golang.org/x/crypto/ssh/terminal",
@@ -237,10 +248,6 @@
 		{
 			"ImportPath": "golang.org/x/net/context",
 			"Rev": "3a29182c25eeabbaaf94daaeecbc7823d86261e7"
-		},
-		{
-			"ImportPath": "gopkg.in/check.v1",
-			"Rev": "11d3bc7aa68e238947792f30573146a3231fc0f1"
 		},
 		{
 			"ImportPath": "gopkg.in/yaml.v2",
