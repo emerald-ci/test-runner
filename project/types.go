@@ -1,6 +1,7 @@
 package project
 
 import (
+	"errors"
 	"io/ioutil"
 	"os"
 	"path/filepath"
@@ -14,8 +15,8 @@ import (
 
 type BuildConfig struct {
 	ComposeFile string `yaml:"compose_file,omitempty"`
-	Service     string `yaml:"service,omitempty"`
-	Command     string `yaml:"command,omitempty"`
+	Service     string `yaml:"service"`
+	Command     string `yaml:"command"`
 }
 
 func (buildConfig *BuildConfig) CommandParts() []string {
@@ -33,6 +34,16 @@ func LoadBuildConfig() (*BuildConfig, error) {
 	err = yaml.Unmarshal(yamlFile, &config)
 	if err != nil {
 		return nil, err
+	}
+
+	if config.ComposeFile == "" {
+		config.ComposeFile = "docker-compose.yml"
+	}
+	if config.Service == "" {
+		return nil, errors.New("Service must not be empty in the yml config")
+	}
+	if config.Command == "" {
+		return nil, errors.New("Command must not be empty in the yml config")
 	}
 
 	return &config, nil
