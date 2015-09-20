@@ -22,5 +22,16 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
+
+	composeProject, err = project.BuildComposeProject(buildConfig.ComposeFile)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	err = composeProject.Delete()
+	if err != nil {
+		log.Fatal(err)
+	}
+
 	os.Exit(exitCode)
 }
