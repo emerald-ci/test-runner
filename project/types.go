@@ -3,7 +3,6 @@ package project
 import (
 	"errors"
 	"io/ioutil"
-	"os"
 	"path/filepath"
 	"strings"
 
@@ -49,11 +48,11 @@ func LoadBuildConfig() (*BuildConfig, error) {
 	return &config, nil
 }
 
-func BuildComposeProject(composeFile string) (*project.Project, error) {
+func BuildComposeProject(projectName string, composeFile string) (*project.Project, error) {
 	project, err := docker.NewProject(&docker.Context{
 		Context: project.Context{
 			ComposeFile:   composeFile,
-			ProjectName:   projectNameByGitProject(),
+			ProjectName:   projectName,
 			LoggerFactory: logger.NewColorLoggerFactory(),
 		},
 	})
@@ -79,12 +78,4 @@ func sanitizeConfig(project *project.Project) {
 		}
 		config.Ports = sanitizedPorts
 	}
-}
-
-func projectNameByGitProject() string {
-	projectName := os.Getenv("PROJECT_NAME")
-	if projectName == "" {
-		return "project"
-	}
-	return projectName
 }

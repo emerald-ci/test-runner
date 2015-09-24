@@ -1,6 +1,7 @@
 package main
 
 import (
+	"flag"
 	"log"
 	"os"
 
@@ -8,12 +9,16 @@ import (
 )
 
 func main() {
+	var projectName string
+	flag.StringVar(&projectName, "project", "project", "Prefix for the container names")
+	flag.Parse()
+
 	buildConfig, err := project.LoadBuildConfig()
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	composeProject, err := project.BuildComposeProject(buildConfig.ComposeFile)
+	composeProject, err := project.BuildComposeProject(projectName, buildConfig.ComposeFile)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -23,7 +28,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	composeProject, err = project.BuildComposeProject(buildConfig.ComposeFile)
+	composeProject, err = project.BuildComposeProject(projectName, buildConfig.ComposeFile)
 	if err != nil {
 		log.Fatal(err)
 	}
