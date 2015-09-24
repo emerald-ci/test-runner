@@ -1,5 +1,4 @@
 include .version
-include .env
 
 all: linux osx windows
 bundles-dir:
