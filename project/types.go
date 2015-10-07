@@ -2,8 +2,6 @@ package project
 
 import (
 	"errors"
-	"io/ioutil"
-	"path/filepath"
 	"strings"
 
 	"github.com/docker/libcompose/cli/logger"
@@ -22,15 +20,9 @@ func (buildConfig *BuildConfig) CommandParts() []string {
 	return strings.Split(buildConfig.Command, " ")
 }
 
-func LoadBuildConfig() (*BuildConfig, error) {
-	filename, _ := filepath.Abs("./.emerald.yml")
-	yamlFile, err := ioutil.ReadFile(filename)
-	if err != nil {
-		return nil, err
-	}
-
+func BuildProjectConfig(configContent []byte) (*BuildConfig, error) {
 	var config BuildConfig
-	err = yaml.Unmarshal(yamlFile, &config)
+	err := yaml.Unmarshal(configContent, &config)
 	if err != nil {
 		return nil, err
 	}
