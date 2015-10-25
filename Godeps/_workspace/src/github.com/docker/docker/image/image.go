@@ -6,7 +6,7 @@ import (
 	"regexp"
 	"time"
 
-	"github.com/docker/docker/runconfig"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/docker/runconfig"
 )
 
 var validHex = regexp.MustCompile(`^([a-f0-9]{64})$`)

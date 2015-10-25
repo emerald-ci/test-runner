@@ -9,7 +9,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/Sirupsen/logrus"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/Sirupsen/logrus"
 )
 
 // exclusion return true if the specified pattern is an exclusion

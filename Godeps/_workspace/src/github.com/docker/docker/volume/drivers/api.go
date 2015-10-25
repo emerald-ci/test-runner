@@ -2,7 +2,7 @@
 
 package volumedrivers
 
-import "github.com/docker/docker/volume"
+import "github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/docker/volume"
 
 // NewVolumeDriver returns a driver has the given name mapped on the given client.
 func NewVolumeDriver(name string, c client) volume.Driver {

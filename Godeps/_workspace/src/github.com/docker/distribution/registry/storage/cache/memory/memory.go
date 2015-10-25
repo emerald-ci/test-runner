@@ -3,11 +3,11 @@ package memory
 import (
 	"sync"
 
-	"github.com/docker/distribution"
-	"github.com/docker/distribution/context"
-	"github.com/docker/distribution/digest"
-	"github.com/docker/distribution/registry/api/v2"
-	"github.com/docker/distribution/registry/storage/cache"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/context"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/digest"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/registry/api/v2"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/registry/storage/cache"
 )
 
 type inMemoryBlobDescriptorCacheProvider struct {

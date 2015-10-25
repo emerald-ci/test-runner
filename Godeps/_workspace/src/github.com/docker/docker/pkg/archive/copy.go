@@ -10,7 +10,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/Sirupsen/logrus"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/Sirupsen/logrus"
 )
 
 // Errors used or returned by this file.

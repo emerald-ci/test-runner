@@ -12,8 +12,8 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/docker/distribution/context"
-	"github.com/docker/distribution/registry/auth"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/context"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/registry/auth"
 )
 
 // accessController provides a simple implementation of auth.AccessController

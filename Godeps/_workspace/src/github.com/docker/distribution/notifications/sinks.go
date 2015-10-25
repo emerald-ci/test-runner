@@ -6,7 +6,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/Sirupsen/logrus"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/Sirupsen/logrus"
 )
 
 // NOTE(stevvooe): This file contains definitions for several utility sinks.

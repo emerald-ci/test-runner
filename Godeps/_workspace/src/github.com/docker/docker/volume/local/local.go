@@ -12,7 +12,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/docker/docker/volume"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/docker/volume"
 )
 
 // VolumeDataPathName is the name of the directory where the volume data is stored.

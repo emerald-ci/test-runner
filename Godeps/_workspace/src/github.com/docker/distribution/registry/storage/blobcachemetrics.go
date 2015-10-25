@@ -4,7 +4,7 @@ import (
 	"expvar"
 	"sync/atomic"
 
-	"github.com/docker/distribution/registry/storage/cache"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/registry/storage/cache"
 )
 
 type blobStatCollector struct {

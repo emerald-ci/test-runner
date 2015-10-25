@@ -5,7 +5,7 @@ import (
 	"io"
 	"strings"
 
-	"github.com/docker/docker/pkg/nat"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/docker/pkg/nat"
 )
 
 // Entrypoint encapsulates the container entrypoint.

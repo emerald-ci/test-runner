@@ -9,12 +9,12 @@ import (
 	"os"
 	"testing"
 
-	"github.com/docker/distribution"
-	"github.com/docker/distribution/context"
-	"github.com/docker/distribution/digest"
-	"github.com/docker/distribution/registry/storage/cache/memory"
-	"github.com/docker/distribution/registry/storage/driver/inmemory"
-	"github.com/docker/distribution/testutil"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/context"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/digest"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/registry/storage/cache/memory"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/registry/storage/driver/inmemory"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/testutil"
 )
 
 // TestSimpleBlobUpload covers the blob upload process, exercising common

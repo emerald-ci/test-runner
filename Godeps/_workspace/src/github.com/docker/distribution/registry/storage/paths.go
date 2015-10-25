@@ -5,7 +5,7 @@ import (
 	"path"
 	"strings"
 
-	"github.com/docker/distribution/digest"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/digest"
 )
 
 const storagePathVersion = "v2"

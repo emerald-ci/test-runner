@@ -9,8 +9,8 @@ import (
 	"os/signal"
 
 	"github.com/Azure/go-ansiterm/winterm"
-	"github.com/Sirupsen/logrus"
-	"github.com/docker/docker/pkg/term/windows"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/Sirupsen/logrus"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/docker/pkg/term/windows"
 )
 
 // State holds the console mode for the terminal.

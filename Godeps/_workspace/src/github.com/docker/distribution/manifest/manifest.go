@@ -3,8 +3,8 @@ package manifest
 import (
 	"encoding/json"
 
-	"github.com/docker/distribution/digest"
-	"github.com/docker/libtrust"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/digest"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/libtrust"
 )
 
 // TODO(stevvooe): When we rev the manifest format, the contents of this

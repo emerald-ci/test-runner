@@ -4,8 +4,8 @@ import (
 	"net/http"
 	"regexp"
 
-	"github.com/docker/distribution/digest"
-	"github.com/docker/distribution/registry/api/errcode"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/digest"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/registry/api/errcode"
 )
 
 var (

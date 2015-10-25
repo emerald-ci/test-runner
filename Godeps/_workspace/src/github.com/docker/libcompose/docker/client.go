@@ -7,14 +7,16 @@ import (
 	"path/filepath"
 	"runtime"
 
-	"github.com/docker/docker/cliconfig"
-	"github.com/docker/docker/opts"
-	"github.com/docker/docker/pkg/homedir"
-	"github.com/docker/docker/pkg/tlsconfig"
-	"github.com/samalba/dockerclient"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/docker/cliconfig"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/docker/opts"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/docker/pkg/homedir"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/docker/pkg/tlsconfig"
+	dockerclient "github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/fsouza/go-dockerclient"
 )
 
 const (
+	// DefaultAPIVersion is the default docker API version set by libcompose
+	DefaultAPIVersion   = "1.20"
 	defaultTrustKeyFile = "key.json"
 	defaultCaFile       = "ca.pem"
 	defaultKeyFile      = "key.pem"
@@ -31,15 +33,18 @@ func init() {
 	}
 }
 
+// ClientOpts holds docker client options (host, tls, ..)
 type ClientOpts struct {
 	TLS        bool
 	TLSVerify  bool
 	TLSOptions tlsconfig.Options
 	TrustKey   string
 	Host       string
+	APIVersion string
 }
 
-func CreateClient(c ClientOpts) (dockerclient.Client, error) {
+// CreateClient creates a docker client based on the specified options.
+func CreateClient(c ClientOpts) (*dockerclient.Client, error) {
 	if c.TLSOptions.CAFile == "" {
 		c.TLSOptions.CAFile = filepath.Join(dockerCertPath, defaultCaFile)
 	}
@@ -90,5 +95,17 @@ func CreateClient(c ClientOpts) (dockerclient.Client, error) {
 		}
 	}
 
-	return dockerclient.NewDockerClient(c.Host, tlsConfig)
+	apiVersion := c.APIVersion
+	if apiVersion == "" {
+		apiVersion = DefaultAPIVersion
+	}
+	client, err := dockerclient.NewVersionedClient(c.Host, apiVersion)
+	if err != nil {
+		return nil, err
+	}
+
+	if tlsConfig != nil {
+		client.TLSConfig = tlsConfig
+	}
+	return client, nil
 }

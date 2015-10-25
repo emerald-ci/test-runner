@@ -4,11 +4,11 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/docker/distribution"
-	"github.com/docker/distribution/context"
-	"github.com/docker/distribution/digest"
-	"github.com/docker/distribution/registry/storage/driver"
-	"github.com/docker/distribution/uuid"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/context"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/digest"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/registry/storage/driver"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/uuid"
 )
 
 // linkedBlobStore provides a full BlobService that namespaces the blobs to a

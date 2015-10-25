@@ -8,7 +8,7 @@ import (
 	"regexp"
 	"strconv"
 
-	"github.com/docker/docker/pkg/random"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/docker/pkg/random"
 )
 
 const shortLen = 12

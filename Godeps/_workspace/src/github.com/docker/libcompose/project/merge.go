@@ -7,12 +7,14 @@ import (
 	"path"
 	"strings"
 
-	"github.com/Sirupsen/logrus"
-	"github.com/docker/libcompose/utils"
-	"gopkg.in/yaml.v2"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/Sirupsen/logrus"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/libcompose/utils"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/gopkg.in/yaml.v2"
 )
 
 var (
+	// ValidRemotes list the of valid prefixes that can be sent to Docker as a build remote location
+	// This is public for consumers of libcompose to use
 	ValidRemotes = []string{
 		"git://",
 		"git@github.com:",
@@ -29,17 +31,20 @@ var (
 type rawService map[string]interface{}
 type rawServiceMap map[string]rawService
 
-func Merge(p *Project, bytes []byte) (map[string]*ServiceConfig, error) {
+func mergeProject(p *Project, bytes []byte) (map[string]*ServiceConfig, error) {
 	configs := make(map[string]*ServiceConfig)
 
 	datas := make(rawServiceMap)
-	err := yaml.Unmarshal(bytes, &datas)
-	if err != nil {
-		logrus.Fatalf("Could not parse config for project %s : %v", p.Name, err)
+	if err := yaml.Unmarshal(bytes, &datas); err != nil {
+		return nil, err
+	}
+
+	if err := interpolate(p.context.EnvironmentLookup, &datas); err != nil {
+		return nil, err
 	}
 
 	for name, data := range datas {
-		data, err := parse(p.context.ConfigLookup, p.File, data, datas)
+		data, err := parse(p.context.ConfigLookup, p.context.EnvironmentLookup, p.File, data, datas)
 		if err != nil {
 			logrus.Errorf("Failed to parse service %s: %v", name, err)
 			return nil, err
@@ -48,8 +53,21 @@ func Merge(p *Project, bytes []byte) (map[string]*ServiceConfig, error) {
 		datas[name] = data
 	}
 
-	err = utils.Convert(datas, &configs)
-	return configs, err
+	if err := utils.Convert(datas, &configs); err != nil {
+		return nil, err
+	}
+
+	adjustValues(configs)
+	return configs, nil
+}
+
+func adjustValues(configs map[string]*ServiceConfig) {
+	// yaml parser turns "no" into "false" but that is not valid for a restart policy
+	for _, v := range configs {
+		if v.Restart == "false" {
+			v.Restart = "no"
+		}
+	}
 }
 
 func readEnvFile(configLookup ConfigLookup, inFile string, serviceData rawService) (rawService, error) {
@@ -136,7 +154,7 @@ func resolveBuild(inFile string, serviceData rawService) (rawService, error) {
 	return serviceData, nil
 }
 
-func parse(configLookup ConfigLookup, inFile string, serviceData rawService, datas rawServiceMap) (rawService, error) {
+func parse(configLookup ConfigLookup, environmentLookup EnvironmentLookup, inFile string, serviceData rawService, datas rawServiceMap) (rawService, error) {
 	serviceData, err := readEnvFile(configLookup, inFile, serviceData)
 	if err != nil {
 		return nil, err
@@ -172,7 +190,7 @@ func parse(configLookup ConfigLookup, inFile string, serviceData rawService, dat
 
 	if file == "" {
 		if serviceData, ok := datas[service]; ok {
-			baseService, err = parse(configLookup, inFile, serviceData, datas)
+			baseService, err = parse(configLookup, environmentLookup, inFile, serviceData, datas)
 		} else {
 			return nil, fmt.Errorf("Failed to find service %s to extend", service)
 		}
@@ -188,12 +206,17 @@ func parse(configLookup ConfigLookup, inFile string, serviceData rawService, dat
 			return nil, err
 		}
 
+		err = interpolate(environmentLookup, &baseRawServices)
+		if err != nil {
+			return nil, err
+		}
+
 		baseService, ok = baseRawServices[service]
 		if !ok {
 			return nil, fmt.Errorf("Failed to find service %s in file %s", service, file)
 		}
 
-		baseService, err = parse(configLookup, resolved, baseService, baseRawServices)
+		baseService, err = parse(configLookup, environmentLookup, resolved, baseService, baseRawServices)
 	}
 
 	if err != nil {
@@ -215,6 +238,12 @@ func parse(configLookup ConfigLookup, inFile string, serviceData rawService, dat
 	}
 
 	for k, v := range serviceData {
+		// Image and build are mutually exclusive in merge
+		if k == "image" {
+			delete(baseService, "build")
+		} else if k == "build" {
+			delete(baseService, "image")
+		}
 		existing, ok := baseService[k]
 		if ok {
 			baseService[k] = merge(existing, v)
@@ -265,7 +294,6 @@ func clone(in rawService) rawService {
 func asString(obj interface{}) string {
 	if v, ok := obj.(string); ok {
 		return v
-	} else {
-		return ""
 	}
+	return ""
 }

@@ -3,14 +3,14 @@ package notifications
 import (
 	"testing"
 
-	"github.com/docker/distribution/digest"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/digest"
 
-	"github.com/docker/libtrust"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/libtrust"
 
-	"github.com/docker/distribution/manifest"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/manifest"
 
-	"github.com/docker/distribution/registry/api/v2"
-	"github.com/docker/distribution/uuid"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/registry/api/v2"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/uuid"
 )
 
 var (

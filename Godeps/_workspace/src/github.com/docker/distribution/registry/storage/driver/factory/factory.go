@@ -3,7 +3,7 @@ package factory
 import (
 	"fmt"
 
-	storagedriver "github.com/docker/distribution/registry/storage/driver"
+	storagedriver "github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/registry/storage/driver"
 )
 
 // driverFactories stores an internal mapping between storage driver names and their respective

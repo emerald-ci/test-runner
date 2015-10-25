@@ -3,7 +3,7 @@ package runconfig
 import (
 	"strings"
 
-	"github.com/docker/docker/pkg/nat"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/docker/pkg/nat"
 )
 
 // Merge merges two Config, the image container configuration (defaults values),

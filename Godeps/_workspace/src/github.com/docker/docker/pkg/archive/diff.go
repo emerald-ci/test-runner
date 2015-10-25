@@ -11,9 +11,9 @@ import (
 	"strings"
 	"syscall"
 
-	"github.com/Sirupsen/logrus"
-	"github.com/docker/docker/pkg/pools"
-	"github.com/docker/docker/pkg/system"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/Sirupsen/logrus"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/docker/pkg/pools"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/docker/pkg/system"
 )
 
 func UnpackLayer(dest string, layer ArchiveReader) (size int64, err error) {

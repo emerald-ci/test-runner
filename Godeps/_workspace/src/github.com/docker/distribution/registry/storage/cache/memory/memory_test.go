@@ -3,7 +3,7 @@ package memory
 import (
 	"testing"
 
-	"github.com/docker/distribution/registry/storage/cache"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/registry/storage/cache"
 )
 
 // TestInMemoryBlobInfoCache checks the in memory implementation is working

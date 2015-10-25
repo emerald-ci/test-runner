@@ -3,11 +3,11 @@ package storage
 import (
 	"fmt"
 
-	"github.com/docker/distribution"
-	"github.com/docker/distribution/context"
-	"github.com/docker/distribution/digest"
-	"github.com/docker/distribution/manifest"
-	"github.com/docker/libtrust"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/context"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/digest"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/manifest"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/libtrust"
 )
 
 type manifestStore struct {

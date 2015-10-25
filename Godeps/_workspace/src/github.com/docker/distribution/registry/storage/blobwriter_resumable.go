@@ -9,9 +9,9 @@ import (
 	"path"
 	"strconv"
 
-	"github.com/Sirupsen/logrus"
-	"github.com/docker/distribution/context"
-	storagedriver "github.com/docker/distribution/registry/storage/driver"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/Sirupsen/logrus"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/context"
+	storagedriver "github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/registry/storage/driver"
 	"github.com/stevvooe/resumable"
 
 	// register resumable hashes with import

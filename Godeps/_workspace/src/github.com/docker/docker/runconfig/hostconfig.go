@@ -5,8 +5,8 @@ import (
 	"io"
 	"strings"
 
-	"github.com/docker/docker/pkg/nat"
-	"github.com/docker/docker/pkg/ulimit"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/docker/pkg/nat"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/docker/pkg/ulimit"
 )
 
 // KeyValuePair is a structure that hold a value for a key.

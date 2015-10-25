@@ -14,15 +14,15 @@ import (
 	"testing"
 	"time"
 
-	"github.com/docker/distribution/uuid"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/uuid"
 
-	"github.com/docker/distribution"
-	"github.com/docker/distribution/context"
-	"github.com/docker/distribution/digest"
-	"github.com/docker/distribution/manifest"
-	"github.com/docker/distribution/registry/api/errcode"
-	"github.com/docker/distribution/registry/api/v2"
-	"github.com/docker/distribution/testutil"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/context"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/digest"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/manifest"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/registry/api/errcode"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/registry/api/v2"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/testutil"
 )
 
 func testServer(rrm testutil.RequestResponseMap) (string, func()) {

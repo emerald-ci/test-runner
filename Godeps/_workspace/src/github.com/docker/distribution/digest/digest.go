@@ -9,7 +9,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/docker/docker/pkg/tarsum"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/docker/pkg/tarsum"
 )
 
 const (

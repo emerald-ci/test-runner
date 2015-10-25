@@ -3,9 +3,9 @@ package context
 import (
 	"fmt"
 
-	"github.com/docker/distribution/uuid"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/uuid"
 
-	"github.com/Sirupsen/logrus"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/Sirupsen/logrus"
 )
 
 // Logger provides a leveled-logging interface.

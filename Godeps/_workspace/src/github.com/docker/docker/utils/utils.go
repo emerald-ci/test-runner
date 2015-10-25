@@ -13,10 +13,10 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/docker/docker/autogen/dockerversion"
-	"github.com/docker/docker/pkg/archive"
-	"github.com/docker/docker/pkg/fileutils"
-	"github.com/docker/docker/pkg/stringid"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/docker/autogen/dockerversion"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/docker/pkg/archive"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/docker/pkg/fileutils"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/docker/pkg/stringid"
 )
 
 // SelfPath figures out the absolute path of our own binary (if it's still around).

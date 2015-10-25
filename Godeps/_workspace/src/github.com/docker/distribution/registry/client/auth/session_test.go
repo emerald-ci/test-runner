@@ -8,8 +8,8 @@ import (
 	"net/url"
 	"testing"
 
-	"github.com/docker/distribution/registry/client/transport"
-	"github.com/docker/distribution/testutil"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/registry/client/transport"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/testutil"
 )
 
 func testServer(rrm testutil.RequestResponseMap) (string, func()) {

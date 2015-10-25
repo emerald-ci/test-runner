@@ -10,7 +10,7 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/docker/distribution/manifest"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/manifest"
 )
 
 // TestHTTPSink mocks out an http endpoint and notifies it under a couple of

@@ -8,8 +8,8 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/docker/docker/pkg/parsers"
-	"github.com/docker/docker/volume"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/docker/pkg/parsers"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/docker/volume"
 )
 
 var (

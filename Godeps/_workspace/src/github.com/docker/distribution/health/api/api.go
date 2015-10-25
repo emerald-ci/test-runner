@@ -4,7 +4,7 @@ import (
 	"errors"
 	"net/http"
 
-	"github.com/docker/distribution/health"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/health"
 )
 
 var (

@@ -7,7 +7,7 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/Sirupsen/logrus"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/Sirupsen/logrus"
 )
 
 // logHook is for hooking Panic in web application

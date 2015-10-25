@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/Sirupsen/logrus"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/Sirupsen/logrus"
 
-	"gopkg.in/yaml.v2"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/gopkg.in/yaml.v2"
 )
 
 // InParallel holds a pool and a waitgroup to execute tasks in parallel and to be able
@@ -78,12 +78,20 @@ func FilterString(data map[string][]string) string {
 	return string(bytes)
 }
 
-// LabelFilter returns a label json representation of the specifed couple (key,value)
+// LabelFilterString returns a label json string representation of the specifed couple (key,value)
 // that is used as filter for docker.
-func LabelFilter(key, value string) string {
+func LabelFilterString(key, value string) string {
 	return FilterString(map[string][]string{
 		"label": {fmt.Sprintf("%s=%s", key, value)},
 	})
+}
+
+// LabelFilter returns a label map representation of the specifed couple (key,value)
+// that is used as filter for docker.
+func LabelFilter(key, value string) map[string][]string {
+	return map[string][]string{
+		"label": {fmt.Sprintf("%s=%s", key, value)},
+	}
 }
 
 // Contains checks if the specified string (key) is present in the specified collection.

@@ -10,9 +10,9 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/Sirupsen/logrus"
-	"github.com/docker/distribution/registry/api/v2"
-	"github.com/docker/distribution/registry/client/transport"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/Sirupsen/logrus"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/registry/api/v2"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/registry/client/transport"
 )
 
 // for mocking in unit tests

@@ -8,9 +8,9 @@ import (
 	"sync"
 	"time"
 
-	log "github.com/Sirupsen/logrus"
-	"github.com/docker/distribution/uuid"
-	"github.com/gorilla/mux"
+	log "github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/Sirupsen/logrus"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/uuid"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/gorilla/mux"
 )
 
 // Common errors used with this package.

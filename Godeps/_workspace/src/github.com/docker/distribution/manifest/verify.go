@@ -3,8 +3,8 @@ package manifest
 import (
 	"crypto/x509"
 
-	"github.com/Sirupsen/logrus"
-	"github.com/docker/libtrust"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/Sirupsen/logrus"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/libtrust"
 )
 
 // Verify verifies the signature of the signed manifest returning the public

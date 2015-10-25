@@ -3,7 +3,7 @@ package middleware
 import (
 	"fmt"
 
-	"github.com/docker/distribution"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution"
 )
 
 // InitFunc is the type of a RegistryMiddleware factory function and is

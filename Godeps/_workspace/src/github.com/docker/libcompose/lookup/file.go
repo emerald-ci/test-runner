@@ -5,7 +5,7 @@ import (
 	"path"
 	"strings"
 
-	"github.com/Sirupsen/logrus"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/Sirupsen/logrus"
 )
 
 // FileConfigLookup is a "bare" structure that implements the project.ConfigLookup interface

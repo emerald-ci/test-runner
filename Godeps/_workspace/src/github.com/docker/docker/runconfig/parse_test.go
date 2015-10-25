@@ -6,9 +6,9 @@ import (
 	"strings"
 	"testing"
 
-	flag "github.com/docker/docker/pkg/mflag"
-	"github.com/docker/docker/pkg/nat"
-	"github.com/docker/docker/pkg/parsers"
+	flag "github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/docker/pkg/mflag"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/docker/pkg/nat"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/docker/pkg/parsers"
 )
 
 func parseRun(args []string) (*Config, *HostConfig, *flag.FlagSet, error) {

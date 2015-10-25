@@ -4,7 +4,7 @@ import (
 	"os"
 	"runtime"
 
-	"github.com/opencontainers/runc/libcontainer/user"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/opencontainers/runc/libcontainer/user"
 )
 
 // Key returns the env var name for the user's home dir based on

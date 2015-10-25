@@ -1,8 +1,8 @@
 package storage
 
 import (
-	"github.com/docker/distribution/context"
-	"github.com/docker/distribution/registry/storage/driver"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/context"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/registry/storage/driver"
 )
 
 // Exists provides a utility method to test whether or not a path exists in

@@ -8,7 +8,7 @@ import (
 	"strconv"
 	"strings"
 
-	"gopkg.in/yaml.v2"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/gopkg.in/yaml.v2"
 )
 
 // Version is a major/minor version pair of the form Major.Minor

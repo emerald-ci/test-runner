@@ -9,7 +9,7 @@ import (
 	"testing"
 
 	"github.com/docker/docker/pkg/plugins"
-	"github.com/docker/docker/pkg/tlsconfig"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/docker/pkg/tlsconfig"
 )
 
 func TestVolumeRequestError(t *testing.T) {

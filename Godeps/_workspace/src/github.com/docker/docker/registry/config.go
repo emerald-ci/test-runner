@@ -8,10 +8,10 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/docker/distribution/registry/api/v2"
-	"github.com/docker/docker/image"
-	"github.com/docker/docker/opts"
-	flag "github.com/docker/docker/pkg/mflag"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/registry/api/v2"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/docker/image"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/docker/opts"
+	flag "github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/docker/pkg/mflag"
 )
 
 // Options holds command line options.

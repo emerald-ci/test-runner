@@ -7,7 +7,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/docker/docker/pkg/jsonmessage"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/docker/pkg/jsonmessage"
 )
 
 // Download requests a given URL and returns an io.Reader

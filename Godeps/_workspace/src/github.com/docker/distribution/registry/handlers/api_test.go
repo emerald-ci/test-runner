@@ -18,16 +18,16 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/docker/distribution/configuration"
-	"github.com/docker/distribution/digest"
-	"github.com/docker/distribution/manifest"
-	"github.com/docker/distribution/registry/api/errcode"
-	"github.com/docker/distribution/registry/api/v2"
-	_ "github.com/docker/distribution/registry/storage/driver/inmemory"
-	"github.com/docker/distribution/testutil"
-	"github.com/docker/libtrust"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/configuration"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/digest"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/manifest"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/registry/api/errcode"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/registry/api/v2"
+	_ "github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/registry/storage/driver/inmemory"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/testutil"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/libtrust"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/golang.org/x/net/context"
 	"github.com/gorilla/handlers"
-	"golang.org/x/net/context"
 )
 
 // TestCheckAPI hits the base endpoint (/v2/) ensures we return the specified

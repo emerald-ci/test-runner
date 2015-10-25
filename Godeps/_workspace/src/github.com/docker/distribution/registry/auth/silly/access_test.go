@@ -5,8 +5,8 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/docker/distribution/registry/auth"
-	"golang.org/x/net/context"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/registry/auth"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/golang.org/x/net/context"
 )
 
 func TestSillyAccessController(t *testing.T) {

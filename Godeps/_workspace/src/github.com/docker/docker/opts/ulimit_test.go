@@ -3,7 +3,7 @@ package opts
 import (
 	"testing"
 
-	"github.com/docker/docker/pkg/ulimit"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/docker/pkg/ulimit"
 )
 
 func TestUlimitOpt(t *testing.T) {

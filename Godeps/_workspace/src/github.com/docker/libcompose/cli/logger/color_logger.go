@@ -5,8 +5,8 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/docker/libcompose/logger"
-	"golang.org/x/crypto/ssh/terminal"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/libcompose/logger"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/golang.org/x/crypto/ssh/terminal"
 )
 
 // ColorLoggerFactory implements logger.Factory interface using ColorLogger.

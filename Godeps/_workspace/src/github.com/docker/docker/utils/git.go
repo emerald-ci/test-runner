@@ -10,8 +10,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/docker/docker/pkg/symlink"
-	"github.com/docker/docker/pkg/urlutil"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/docker/pkg/symlink"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/docker/pkg/urlutil"
 )
 
 // GitClone clones a repository into a newly created directory which

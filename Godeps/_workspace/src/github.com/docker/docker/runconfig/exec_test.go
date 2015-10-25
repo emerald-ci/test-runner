@@ -5,7 +5,7 @@ import (
 	"io/ioutil"
 	"testing"
 
-	flag "github.com/docker/docker/pkg/mflag"
+	flag "github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/docker/pkg/mflag"
 )
 
 type arguments struct {

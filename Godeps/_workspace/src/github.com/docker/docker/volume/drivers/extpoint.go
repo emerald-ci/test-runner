@@ -5,7 +5,7 @@ import (
 	"sync"
 
 	"github.com/docker/docker/pkg/plugins"
-	"github.com/docker/docker/volume"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/docker/volume"
 )
 
 // currently created by hand. generation tool would generate this like:

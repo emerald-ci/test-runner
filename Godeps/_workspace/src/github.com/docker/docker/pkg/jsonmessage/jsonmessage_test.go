@@ -6,8 +6,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/docker/docker/pkg/term"
-	"github.com/docker/docker/pkg/timeutils"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/docker/pkg/term"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/docker/pkg/timeutils"
 	"strings"
 )
 

@@ -34,7 +34,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/docker/distribution/context"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/context"
 )
 
 // UserInfo carries information about

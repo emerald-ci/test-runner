@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 
-	"github.com/docker/libtrust"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/libtrust"
 )
 
 func main() {

@@ -3,7 +3,7 @@ package registry
 import (
 	"strings"
 
-	"github.com/docker/distribution/digest"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/digest"
 )
 
 // Reference represents a tag or digest within a repository

@@ -5,11 +5,11 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/docker/docker/opts"
-	flag "github.com/docker/docker/pkg/mflag"
-	"github.com/docker/docker/pkg/nat"
-	"github.com/docker/docker/pkg/parsers"
-	"github.com/docker/docker/pkg/units"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/docker/opts"
+	flag "github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/docker/pkg/mflag"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/docker/pkg/nat"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/docker/pkg/parsers"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/docker/pkg/units"
 )
 
 var (

@@ -5,8 +5,8 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/docker/distribution/digest"
-	"github.com/gorilla/mux"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/digest"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/gorilla/mux"
 )
 
 // URLBuilder creates registry API urls from a single base endpoint. It can be

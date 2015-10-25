@@ -11,7 +11,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/gorilla/mux"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/gorilla/mux"
 )
 
 type routeTestCase struct {

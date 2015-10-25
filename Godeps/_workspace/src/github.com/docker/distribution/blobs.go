@@ -7,8 +7,8 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/docker/distribution/context"
-	"github.com/docker/distribution/digest"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/context"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/digest"
 )
 
 var (

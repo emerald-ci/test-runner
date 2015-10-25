@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/docker/docker/cliconfig"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/docker/cliconfig"
 )
 
 func TestEncodeAuth(t *testing.T) {

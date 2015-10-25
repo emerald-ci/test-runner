@@ -4,8 +4,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/docker/distribution/context"
-	storageDriver "github.com/docker/distribution/registry/storage/driver"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/context"
+	storageDriver "github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/registry/storage/driver"
 )
 
 // SkipDir is used as a return value from onFileFunc to indicate that

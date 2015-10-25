@@ -10,8 +10,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/docker/distribution/registry/client"
-	"github.com/docker/distribution/registry/client/transport"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/registry/client"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/registry/client/transport"
 )
 
 // AuthenticationHandler is an interface for authorizing a request from

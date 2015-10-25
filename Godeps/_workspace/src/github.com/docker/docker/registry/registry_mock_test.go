@@ -15,10 +15,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/docker/docker/opts"
-	"github.com/gorilla/mux"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/docker/opts"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/gorilla/mux"
 
-	"github.com/Sirupsen/logrus"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/Sirupsen/logrus"
 )
 
 var (

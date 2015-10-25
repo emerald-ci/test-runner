@@ -15,7 +15,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/docker/docker/pkg/system"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/docker/pkg/system"
 )
 
 func TestIsArchiveNilHeader(t *testing.T) {

@@ -7,9 +7,9 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/docker/distribution/registry/client/auth"
-	"github.com/docker/docker/cliconfig"
-	"github.com/docker/docker/pkg/tlsconfig"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/registry/client/auth"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/docker/cliconfig"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/docker/pkg/tlsconfig"
 )
 
 // Service is a registry service. It tracks configuration data such as a list

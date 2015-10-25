@@ -8,8 +8,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/docker/distribution/registry/client/transport"
-	"github.com/docker/docker/cliconfig"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/registry/client/transport"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/docker/cliconfig"
 )
 
 var (

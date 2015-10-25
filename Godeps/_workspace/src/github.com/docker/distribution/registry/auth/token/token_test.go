@@ -15,9 +15,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/docker/distribution/registry/auth"
-	"github.com/docker/libtrust"
-	"golang.org/x/net/context"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/distribution/registry/auth"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/libtrust"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/golang.org/x/net/context"
 )
 
 func makeRootKeys(numKeys int) ([]libtrust.PrivateKey, error) {

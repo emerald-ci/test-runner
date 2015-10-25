@@ -6,8 +6,8 @@ import (
 	"os"
 	"testing"
 
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/gopkg.in/yaml.v2"
 	. "gopkg.in/check.v1"
-	"gopkg.in/yaml.v2"
 )
 
 // Hook up gocheck into the "go test" runner

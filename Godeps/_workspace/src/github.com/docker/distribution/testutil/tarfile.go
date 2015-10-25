@@ -10,7 +10,7 @@ import (
 	mrand "math/rand"
 	"time"
 
-	"github.com/docker/docker/pkg/tarsum"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/docker/pkg/tarsum"
 )
 
 // CreateRandomTarFile creates a random tarfile, returning it as an

@@ -4,10 +4,10 @@ import (
 	"errors"
 	"strings"
 
-	"github.com/docker/libcompose/cli/logger"
-	"github.com/docker/libcompose/docker"
-	"github.com/docker/libcompose/project"
-	"gopkg.in/yaml.v2"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/libcompose/cli/logger"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/libcompose/docker"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/github.com/docker/libcompose/project"
+	"github.com/emerald-ci/test-runner/Godeps/_workspace/src/gopkg.in/yaml.v2"
 )
 
 type BuildConfig struct {
